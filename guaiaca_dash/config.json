@@ -1,0 +1,12 @@
+{
+    "date_pattern": "^\\d{2}/\\d{2}",
+    "date_pattern_year": "^\\d{2}/\\d{2}/\\d{4}",
+    "mistaken_pattern": "(\\d+/\\d+)\\s*([\\d,.]+)",
+    "mistaken_pattern1":"^([a-zA-Z]+)\\S([0-9]+\\,[0-9]+)",
+    "fraction_pattern" : "(\\d/\\d)",
+    "digiopt1":"(\\d{1,2}\/\\d{1,2})\\S([a-zA-Z]+)",
+    "digiopt2":"(\\d{1,2}\/\\d{1,2})\\S(\\d+)",
+    "banrisul_pattern":"\\+\\+\\s*MOVIMENTOS\\s+(\\w+)\/(\\d{4})",
+    "banrisul_pattern_2":"^(\\d*)\\s+(\\D+)\\s+\\d+\\s+(\\d+\\,\\d+)(\\-*)",
+    "value_pattern":"^([0-9]+\\.?[0-9]+\\,[0-9]+)"
+}

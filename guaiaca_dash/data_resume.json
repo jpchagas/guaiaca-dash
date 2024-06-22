@@ -1,0 +1,50 @@
+{
+    "bradesco":{
+        "fatura":{
+            "janeiro":{
+                "transactions":104,
+                "total": 9712.33
+            },
+            "fevereiro":{
+                "transactions": 53,
+                "total": 5197.62
+            },
+            "marco":{
+                "transactions": 82,
+                "total": 7540.37
+            },
+            "abril":{
+                "transactions": 51,
+                "total": 3684.62
+            },
+            "maio":{
+                "transactions": 68,
+                "total": 5141.52
+            }
+        }
+    },
+    "caixa":{
+
+    },
+    "banrisul":{
+
+    },
+    "c6":{
+
+    },
+    "digio":{
+
+    },
+    "nubank":{
+
+    },
+    "btg":{
+
+    },
+    "xp":{
+
+    },
+    "itau":{
+        
+    }
+}
