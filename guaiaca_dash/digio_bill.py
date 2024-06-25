@@ -59,4 +59,6 @@ class DigioBill:
         df['transacao'] = 'despesa'
         df['metodo'] = 'cc'
         df['banco'] = 'digio'
+        df['origem'] = ' '
+        df['categoria'] = ' '
         return df

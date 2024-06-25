@@ -36,6 +36,8 @@ class CaixaStatement:
         df['transacao'] = 'despesa'
         df['metodo'] = 'pix ou transferencia'
         df['banco'] = 'caixa'
-        df['parcela'] = 1
-        df['qt_parcelas'] = 1
+        df['parcela'] = '1'
+        df['qt_parcelas'] = '1'
+        df['origem'] = ' '
+        df['categoria'] = ' '
         return df

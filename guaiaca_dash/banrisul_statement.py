@@ -48,6 +48,8 @@ class BanrisulStatement:
         df = pd.DataFrame(tuples, columns =['data', 'descricao', 'valor','transacao'])
         df['metodo'] = 'pix ou transferencia'
         df['banco'] = 'banrisul'
-        df['parcela'] = 1
-        df['qt_parcelas'] = 1
+        df['parcela'] = '1'
+        df['qt_parcelas'] = '1'
+        df['origem'] = ' '
+        df['categoria'] = ' '
         return df

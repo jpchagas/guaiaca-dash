@@ -37,27 +37,27 @@ class Uploader:
                 return st.success(f'{category} do {bank} de {month} foi importado')
             case "banrisul":
                 if category == 'fatura':
-                    print("Fluxo Banrisul Fatura")
+                    self.logger.info(f"Importando dados de {category} do {bank} de {month}")
                 else:
-                    print(f"Importando dados do {bank} de {month}")
+                    self.logger.info(f"Importando dados de {category} do {bank} de {month}")
                     df = self.banrisul_extrato.extract_info(file)
                     self.save_file(user,bank,month,df)
                 return st.success(f'{category} do {bank} de {month} foi importado')
             case "caixa":
                 if category == 'fatura':
-                    print("Fluxo Caixa Fatura")
+                    self.logger.info(f"Importando dados de {category} do {bank} de {month}")
                 else:
-                    print(f"Importando dados do {bank} de {month}")
+                    self.logger.info(f"Importando dados de {category} do {bank} de {month}")
                     df = self.caixa_extrato.extract_info(file)
                     self.save_file(user,bank,month,df)
                 return st.success(f'{category} do {bank} de {month} foi importado')
             case "digio":
                 if category == 'fatura':
-                    print(f"Importando dados do {bank} de {month}")
+                    self.logger.info(f"Importando dados de {category} do {bank} de {month}")
                     df = self.digio_fatura.extract_info(file)
                     self.save_file(user,bank,month,df)
                 else:
-                    print("Fluxo Digio Extrato")
+                    self.logger.info(f"Importando dados de {category} do {bank} de {month}")
                 return st.success(f'{category} do {bank} de {month} foi importado')
             case "c6":
                 if category == 'fatura':
@@ -71,21 +71,22 @@ class Uploader:
                 return st.success(f'{category} do {bank} de {month} foi importado')
             case "nubank":
                 if category == 'fatura':
-                    print(f"Importando dados {category} do {bank} de {month}")
+                    self.logger.info(f"Importando dados de {category} do {bank} de {month}")
                     df = self.nubank_fatura.extract_info(file)
                     self.save_file(user,bank,month,df)
                 else:
-                    print(f"Importando dados {category} do {bank} de {month}")
+                    self.logger.info(f"Importando dados de {category} do {bank} de {month}")
                     df = self.nubank_extrato.extract_info(file)
                     self.save_file(user,bank,month,df)
                 return st.success(f'{category} do {bank} de {month} foi importado')
             case "btg":
                 if category == 'fatura':
-                    print("Fluxo BTG Fatura")
+                    self.logger.info(f"Importando dados de {category} do {bank} de {month}")
                 else:
-                    print("Fluxo BTG Extrato")
+                    self.logger.info(f"Importando dados de {category} do {bank} de {month}")
                 return st.success(f'{category} do {bank} de {month} foi importado')
             case _:
+                self.logger.info(f"Banco não cadastrado")
                 return st.error("Banco não cadastrado")
             
     def save_file(self,user,bank,month,df):
@@ -94,6 +95,7 @@ class Uploader:
             if self.fl.file_existence(user, bank, month):
                 output_df = pd.read_csv(f'{file_path}/{month}.csv')
                 df_combined = pd.concat([output_df, df],ignore_index=False)
+                df_combined = df_combined.drop_duplicates()
                 saved = df_combined.to_csv(f'{file_path}/{month}.csv',index=False)
                 if saved is not None:
                     return True
@@ -110,6 +112,7 @@ class Uploader:
             if self.fl.file_existence(user, bank, month):
                 output_df = pd.read_csv(f'{file_path}/{month}.csv')
                 df_combined = pd.concat([output_df, df],ignore_index=False)
+                df_combined = df_combined.drop_duplicates()
                 saved = df_combined.to_csv(f'{file_path}/{month}.csv',index=False)
                 if saved is not None:
                     return True

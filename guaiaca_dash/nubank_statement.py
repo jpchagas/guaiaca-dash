@@ -12,8 +12,10 @@ class NubankStatement:
         df['transacao']=['receita' if x>0 else 'despesa' for x in df['Valor']]
         df['metodo'] = 'pix ou transferencia'
         df['banco'] = 'nubank'
-        df['parcela'] = 1
-        df['qt_parcelas'] = 1
+        df['parcela'] = '1'
+        df['qt_parcelas'] = '1'
+        df['origem'] = ' '
+        df['categoria'] = ' '
         df = df.rename(columns={
             "Data": "data",
             "Descrição": "descricao",

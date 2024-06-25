@@ -14,6 +14,8 @@ class C6Statement:
         df['data'] = pd.to_datetime(df['data'])
         df['data'] = df['data'].dt.strftime('%d/%m/%Y')
         df = df[df['descricao'] != 'PGTOFATCARTAOC6-Faturadecartão']
+        df['origem'] = ' '
+        df['categoria'] = ' '
         return df
     
     def clean_valor(self, brazil_currency):

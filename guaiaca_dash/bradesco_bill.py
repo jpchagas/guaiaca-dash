@@ -106,5 +106,7 @@ class BradescoBill:
         df['transacao'] = 'despesa'
         df['metodo'] = 'cc'
         df['banco'] = 'bradesco'
+        df['origem'] = ' '
+        df['categoria'] = ' '
         return df
         

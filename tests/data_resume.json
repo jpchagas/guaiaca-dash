@@ -1,0 +1,131 @@
+{
+    "bradesco":{
+        "fatura":{
+            "janeiro":{
+                "transactions":105,
+                "total": 9712.33
+            },
+            "fevereiro":{
+                "transactions": 53,
+                "total": 5197.62
+            },
+            "marco":{
+                "transactions": 83,
+                "total": 7540.37
+            },
+            "abril":{
+                "transactions": 51,
+                "total": 3684.62
+            },
+            "maio":{
+                "transactions": 68,
+                "total": 5141.52
+            }
+        }
+    },
+    "caixa":{
+        "extrato":{
+            "janeiro":{
+                "transactions": 7
+            },
+            "fevereiro":{
+                "transactions": 4
+            },
+            "marco":{
+                "transactions": 11
+            },
+            "abril":{
+                "transactions": 10
+            },
+            "maio":{
+                "transactions": 5
+            }
+        }
+
+    },
+    "banrisul":{
+        "extrato":{
+            "janeiro":{
+                "transactions":6
+            },
+            "fevereiro":{
+                "transactions": 4
+            },
+            "marco":{
+                "transactions": 4
+            },
+            "abril":{
+                "transactions": 4
+            },
+            "maio":{
+                "transactions": 3
+            }
+        }
+
+    },
+    "c6":{
+
+    },
+    "digio":{
+        "fatura":{
+            "janeiro":{
+                "transactions":0,
+                "total": 0
+            },
+            "fevereiro":{
+                "transactions": 0,
+                "total": 0
+            },
+            "marco":{
+                "transactions": 0,
+                "total": 0
+            },
+            "abril":{
+                "transactions": 51,
+                "total": 4742.32
+            },
+            "maio":{
+                "transactions": 44,
+                "total": 4123.59
+            }
+        }
+
+    },
+    "nubank":{
+        "fatura":{
+            "janeiro":{
+                "transactions":2,
+                "total": 222.29
+            },
+            "fevereiro":{
+                "transactions": 3,
+                "total": 186.90
+            },
+            "marco":{
+                "transactions": 4,
+                "total": 141.59
+            },
+            "abril":{
+                "transactions": 1,
+                "total": 122.00
+            },
+            "maio":{
+                "transactions": 1,
+                "total": 122.00
+            },
+            "junho":{
+                "transactions": 3,
+                "total": 149.85
+            }
+        }
+    },
+    "btg":{
+
+    },
+    "xp":{
+
+    },
+    "itau":{
+        
+    }
+}

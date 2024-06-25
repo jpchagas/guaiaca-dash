@@ -13,6 +13,11 @@ pypdf = "^4.2.0"
 pytest = "^8.2.2"
 numpy = "^2.0.0"
 pandas = "^2.2.2"
+flake8 = "^7.1.0"
+black = "^24.4.2"
+isort = "^5.13.2"
+jupyter = "^1.0.0"
+plotly = "^5.22.0"
 
 
 [build-system]

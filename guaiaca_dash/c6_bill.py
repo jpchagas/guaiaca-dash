@@ -16,6 +16,8 @@ class C6Bill:
         df['transacao'] = 'despesa'
         df['metodo'] = 'cc'
         df['banco'] = 'c6'
+        df['origem'] = ' '
+        df['categoria'] = ' '
         df = df.rename(columns={
             "Data de Compra": "data",
             "Descrição": "descricao",

@@ -30,11 +30,13 @@ class NubankBill:
                     if len(raw_description)>1:
                         parcela,qt_parcelas = raw_description[1].split("/")
                     valor = self.sh.convert_brazil_to_us_currency(charges[x][y+3])
-                    charges_extracted.append((data,descricao,parcela,qt_parcelas,self.sh.convert_brazil_to_us_currency(valor)))
+                    charges_extracted.append((data,descricao,parcela,qt_parcelas,valor))
         df = pd.DataFrame(charges_extracted, columns =['data', 'descricao','parcela','qt_parcelas', 'valor'])
                 # Step 3: Drop unwanted rows based on description
         df = df[~df['descricao'].str.contains("Pagamento em", case=False, na=False)]
         df['metodo'] = 'cc'
         df['banco'] = 'nubank'
         df['transacao'] = 'despesa'
+        df['origem'] = ' '
+        df['categoria'] = ' '
         return df
